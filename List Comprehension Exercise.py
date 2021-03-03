@@ -62,9 +62,8 @@ for i in original_list:
 # which contains only the positive numbers from the list, as integers.
 
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
-
-
-
+newlist = [int(x) for x in numbers if x>0]
+print(newlist)
 
 ## 2 create a list of integers which specify the length of each word in
 ## a sentence except for the word 'the'
@@ -74,9 +73,16 @@ words = sentence.split()
 
 
 
+length = [len(x) for x in words if x != 'the']
+print(length)
+
+
 ## Given dictionary is consisted of vehicles and their weights in kilograms. 
 ## Contruct a list of the names of vehicles with weight below 5000 kilograms. 
 ## In the same list comprehension make the key names all upper case.
 
 dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, 
 "Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
+
+vehicles = [x.upper() for x in dict if dict[x]<5000]
+print(vehicles)
